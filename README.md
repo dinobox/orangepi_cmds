@@ -26,3 +26,15 @@ if __name__ == '__main__':
 ```
 pip3 install flask
 ```
+
+为了支持orangepi的GPIO，需要安装一些必要的基础库。
+
+```
+sudo apt-get install python-dev
+```
+
+```
+git clone https://github.com/duxingkei33/orangepi_PC_gpio_pyH3
+cd orangepi_PC_gpio_pyH3
+python setup.py install
+```
