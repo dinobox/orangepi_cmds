@@ -23,7 +23,7 @@ def api_take():
     timestamp=int(time())
     pic_file_name = "static/images/{0}.jpg".format(timestamp)
     system("fswebcam {0}".format(pic_file_name))
-    return "<a href='/static/images/{0}'>visit</a>".format(pic_file_name)
+    return "<a href='/{0}'>visit</a>".format(pic_file_name)
 
 @app.route('/api/power/pa7/on',methods=['GET'])
 def api_power_pa7_on():
