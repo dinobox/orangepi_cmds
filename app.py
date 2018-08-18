@@ -6,7 +6,7 @@ from time import time
 from os import system
 
 from pyA20.gpio import gpio
-from pyA20.gpio import port
+from pyA20.gpio import port as pin
 gpio.init()
 #设置 PA7 为输出
 gpio.setcfg(port.PA7, gpio.OUTPUT)
@@ -27,13 +27,13 @@ def api_take():
 
 @app.route('/api/power/pa7/on',methods=['GET'])
 def api_power_pa7_on():
-    gpio.output(port.PA7, gpio.HIGH)
+    gpio.output(pin.PA7, gpio.HIGH)
     return "ok"
 
 
 @app.route('/api/power/pa7/off',methods=['GET'])
 def api_power_pa7_off():
-    gpio.output(port.PA7, gpio.LOW)
+    gpio.output(pin.PA7, gpio.LOW)
     return "ok"
 
 if __name__ == '__main__':
