@@ -9,7 +9,7 @@ from pyA20.gpio import gpio
 from pyA20.gpio import port as pin
 gpio.init()
 #设置 PA7 为输出
-gpio.setcfg(port.PA7, gpio.OUTPUT)
+gpio.setcfg(pin.PA7, gpio.OUTPUT)
 
 app = Flask(__name__)
 
