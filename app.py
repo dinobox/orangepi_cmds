@@ -4,7 +4,7 @@ from flask import make_response,Response
 import json
 from time import time
 from os import system
-
+from os import popen
 from pyA20.gpio import gpio
 from pyA20.gpio import port as pin
 gpio.init()
@@ -40,12 +40,12 @@ def api_power_pa7_off():
 @app.route('/api/update',methods=['GET'])
 def api_update():
     timestamp=int(time())
-    return system("./update.sh")
+    return popen("./update.sh").read()
 
 @app.route('/api/v',methods=['GET'])
 def api_v():
-    return "1.2"
-    
+    return "1.3"
+
 #system("fswebcam %s" % (pic_file_name))
 if __name__ == '__main__':
     from argparse import ArgumentParser
