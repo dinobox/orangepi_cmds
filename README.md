@@ -38,3 +38,14 @@ git clone https://github.com/duxingkei33/orangepi_PC_gpio_pyH3
 cd orangepi_PC_gpio_pyH3
 python setup.py install
 ```
+
+
+### 开机自动启动
+
+```
+nano /etc/rc.local
+```
+
+```
+su - root -c "sh ~/orangepi_cmds/start.sh &"
+```
