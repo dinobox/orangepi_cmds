@@ -36,6 +36,12 @@ def api_power_pa7_off():
     gpio.output(pin.PA7, gpio.LOW)
     return "ok"
 
+
+@app.route('/api/update',methods=['GET'])
+def api_update():
+    timestamp=int(time())
+    return system("./update.sh")
+#system("fswebcam %s" % (pic_file_name))
 if __name__ == '__main__':
     from argparse import ArgumentParser
     parser = ArgumentParser()
