@@ -41,6 +41,11 @@ def api_power_pa7_off():
 def api_update():
     timestamp=int(time())
     return system("./update.sh")
+
+@app.route('/api/v',methods=['GET'])
+def api_v():
+    return "1.2"
+    
 #system("fswebcam %s" % (pic_file_name))
 if __name__ == '__main__':
     from argparse import ArgumentParser
